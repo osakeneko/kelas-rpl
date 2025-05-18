@@ -181,8 +181,11 @@ button:hover {
     }
 
     .pointer {
-        right: 50%;
-        transform: translateX(50%);
+        right: -28px; /* Tetap di kanan lingkaran */
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
         border-right: 20px solid #03fa6e;
     }
 

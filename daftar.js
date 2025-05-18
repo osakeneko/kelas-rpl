@@ -17,6 +17,6 @@ document.getElementById('spin').addEventListener('click', function() {
     window.location.href = 'spin.html';
 });
 
-document.getElementById('chat').addEventListener('click', function() {
-    window.location.href = 'chat.html';
+document.getElementById('galery').addEventListener('click', function() {
+    window.location.href = 'galery.html';
 });

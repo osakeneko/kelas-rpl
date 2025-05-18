@@ -79,11 +79,16 @@
 
   .back-button button { display: flex;
     align-content: right;
+     background-color: #171810;
+    border: 2px solid #03fa6e;
     color: #03fa6e;
-    background-color: rgba(23, 24, 16, 0.8);
-    padding: 5px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
     border-radius: 5px;
+    text-shadow: 0 0 5px #03fa6e;
     box-shadow: 0 0 15px #03fa6e;
+    transition: 0.3s ease;
   }
   span {padding-top: 5px;}
   

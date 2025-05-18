@@ -27,3 +27,14 @@ setInterval(updateClock, 1000);
 
 // Call updateClock to set the initial time
 updateClock();
+const clockContainer = document.getElementById('clock-container');
+const clock = document.getElementById('clock');
+const infoP = document.createElement('p');
+infoP.textContent = "klik aku jika ingin kembali";
+infoP.style.color = "#03fa6e";
+infoP.style.marginTop = "8px";
+infoP.style.cursor = "pointer";
+infoP.onclick = function() {
+    window.location.href = "index.html";
+};
+clockContainer.appendChild(infoP);

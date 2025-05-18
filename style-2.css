@@ -49,16 +49,33 @@
     animation: fadeIn 3s ease-in-out forwards 1s;
   }
   
-  .button-container {
-    display: flex; /* Flex display for desktop */
-    flex-wrap: wrap; /* Allow wrapping to accommodate column layout on mobile */
-    gap: 20px; /* Gap between buttons */
+.button-container {
+    display: grid; /* Ganti dari flex ke grid */
+    grid-template-columns: repeat(3, 1fr); /* 2 kolom */
+    grid-template-rows: repeat(2, auto);   /* 3 baris */
+    gap: 10px;
     opacity: 0;
     animation: slideIn 1s ease-out forwards 2.5s;
-    justify-content: center; /* Center buttons horizontally */
-    width: 80%; /* Adjust width as needed */
-  }
-  
+    justify-items: center;
+    align-items: center;
+}
+
+/* Responsive design for mobile devices */
+@media screen and (max-width: 600px) {
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    button {
+        width: calc(50% - 10px);
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
   button {
     background-color: #171810;
     border: 2px solid #03fa6e;
