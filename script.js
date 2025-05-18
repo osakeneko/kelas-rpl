@@ -35,6 +35,6 @@ infoP.style.color = "#03fa6e";
 infoP.style.marginTop = "8px";
 infoP.style.cursor = "pointer";
 infoP.onclick = function() {
-    window.location.href = "index.html";
+    window.location.href = "https://osakeneko.github.io/kelas-rpl/index.html";
 };
 clockContainer.appendChild(infoP);
