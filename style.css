@@ -48,7 +48,7 @@ h1 {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    flex-direction: row;
 }
 
 .card {
@@ -110,3 +110,61 @@ h1 {
     }
 }
 
+.card svg {
+      width: 48px;
+    height: 48px;
+    margin: 0 8px;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.card-group.wali-kelas {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.card-group.wali-kelas .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 16px 24px;
+}
+
+.card-group.wali-kelas .card svg {
+    margin-bottom: 8px;
+}
+
+.card-group.wali-kelas .card p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .card svg {
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+    }
+    .card-group.wali-kelas .card {
+        padding: 10px 8px;
+    }
+}
+
+.homeroom-teacher {display: flex;
+    flex-direction: row;
+gap: 10px;}
+/* Add to your CSS file, e.g., style.css */
+.card svg,
+.homeroom-teacher svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+    stroke: #39ff14 !important; /* Neon green outline */
+    fill: #39ff14 !important;      /* No fill, just outline */
+}

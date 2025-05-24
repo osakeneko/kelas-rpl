@@ -49,15 +49,17 @@
     animation: fadeIn 3s ease-in-out forwards 1s;
   }
   
+/* ...existing code... */
 .button-container {
-    display: grid; /* Ganti dari flex ke grid */
-    grid-template-columns: repeat(3, 1fr); /* 2 kolom */
-    grid-template-rows: repeat(2, auto);   /* 3 baris */
-    gap: 10px;
-    opacity: 0;
-    animation: slideIn 1s ease-out forwards 2.5s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, auto);
+    gap: 20px;
     justify-items: center;
     align-items: center;
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards 2.5s;
+    margin-bottom: 30px;
 }
 
 /* Responsive design for mobile devices */
@@ -89,6 +91,10 @@
     transition: 0.3s ease;
     width: 200px; /* Fixed width for buttons on desktop */
   }
+
+  .button-container button:hover svg {
+    fill: #171810;
+}
   
   button:hover {
     background-color: #03fa6e;
