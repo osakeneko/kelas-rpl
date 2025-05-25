@@ -31,6 +31,7 @@ body {
 
 /* Title styling */
 h1 {
+    margin-top: 30px;
     font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e, 0 0 30px #03fa6e;
@@ -53,8 +54,8 @@ h1 {
 
 /* Wheel canvas */
 #wheelCanvas {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     transform-origin: center;
     transition: transform 3s ease-out;
     background-color: #171810;
@@ -88,9 +89,66 @@ h1 {
     width: 250px;
 }
 
+.input-section input[type="text"],
+.input-section input[type="text"]:focus {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid #03fa6e;
+  border-radius: 6px;
+  background: transparent;
+  color: #03fa6e;
+  font-size: 1.1em;
+  outline: none;
+  box-shadow: 0 0 10px #03fa6e;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-section input[type="text"]:-webkit-autofill,
+.input-section input[type="text"]:-webkit-autofill:focus,
+.input-section input[type="text"]:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #03fa6e !important;
+  color: #03fa6e !important;
+  border: 2px solid #03fa6e !important;
+  transition: background-color 5000s ease-in-out 0s;
+  background: transparent !important;
+}
+
+.input-section input[type="text"]::placeholder {
+  color: #00ffab99;
+  opacity: 1;
+  text-shadow: 0 0 8px #03fa6e;
+}
+
 #inputList {
     margin-bottom: 10px;
     color: #03fa6e;
+    max-height: 180px;   /* 5 lines x 1.5em line height */
+    overflow-y: auto;
+   margin-bottom: 1em;
+}
+#inputList p {
+  margin: 0.2em 0;
+  line-height: 1.5em;
+}
+/* Neon scrollbar for Webkit browsers */
+#inputList::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  display: block;
+}
+#inputList::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffab, #03fa6e, #00ffab);
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffab, 0 0 20px #03fa6e;
+}
+#inputList::-webkit-scrollbar-thumb:hover {
+  background: #00ffab;
+  box-shadow: 0 0 20px #00ffab, 0 0 40px #03fa6e;
+}
+#inputList::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Buttons */
@@ -189,12 +247,31 @@ button:hover {
         border-right: 20px solid #03fa6e;
     }
 
+    .inputList {
+        max-width: 50%; 
+        
+    }
+
     .input-section {
-        width: 90%;
-        max-width: 250px;
+        width: 100%;
+        max-width: 450px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-controls, .input-contorls {
+        width: 60%;
+        gap: 6px;
+        padding: 0;
+    }
+
+      #inputList {
+        width: 100%;
+        max-width: 150Px;
+        font-size: 0.95em;
     }
 
     button {
-        width: 100%;
+        width: 80%;
     }
 }

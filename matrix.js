@@ -42,3 +42,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawMatrix();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const codeGroup = document.getElementById("matrix-code-group");
+  const cols = 7;
+  const rows = 14;
+  const chars = "アァカサタナハマヤャラワガザダバパABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let drops = Array(cols).fill(0).map(() => Math.floor(Math.random() * rows));
+
+  function drawMatrix() {
+    codeGroup.innerHTML = "";
+    for (let c = 0; c < cols; c++) {
+      for (let r = 0; r < rows; r++) {
+        // Only draw one char per column per frame for the "falling" effect
+        if (r === drops[c]) {
+          const char = chars[Math.floor(Math.random() * chars.length)];
+          const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          text.setAttribute("x", 6 + c * 3.2); // adjust for icon width
+          text.setAttribute("y", 11 + r * 1.6); // adjust for icon height
+          text.setAttribute("font-size", "2.2");
+          text.setAttribute("fill", "#03fa6e");
+          text.setAttribute("opacity", "0.8");
+          text.setAttribute("font-family", "monospace");
+          text.textContent = char;
+          codeGroup.appendChild(text);
+        }
+      }
+      // Randomly move the drop down, reset to top randomly for chaos
+      if (Math.random() > 0.3) {
+        drops[c] = (drops[c] + 1) % rows;
+      } else if (Math.random() > 0.95) {
+        drops[c] = 0;
+      }
+    }
+  }
+
+  setInterval(drawMatrix, 120);
+});

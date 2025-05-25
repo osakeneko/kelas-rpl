@@ -33,21 +33,99 @@
   
   h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-top: 10px;
     text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e, 0 0 30px #03fa6e;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
   }
-  
-  img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #03fa6e;
+
+  #logo h2 {
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e, 0 0 30px #03fa6e;
     opacity: 0;
-    animation: fadeIn 3s ease-in-out forwards 1s;
+    animation: fadeIn 2s ease-in-out forwards;
   }
+
+#eksponen27 {
+  color: #03fa6e;
+  font-size: 1em;
+  vertical-align: super;
+  margin-left: 2px;
+  filter: drop-shadow(0 0 8px #03fa6e) drop-shadow(0 0 16px #03fa6e);
+  animation: glow-breath 2.5s ease-in-out infinite alternate;
+  transition: color 0.3s, filter 0.3s;
+}
+
+#logo:hover #eksponen27 {
+  color: #171810;
+  filter: drop-shadow(0 0 16px #03fa6e) drop-shadow(0 0 32px #03fa6e) brightness(1.5);
+}
+  
+@keyframes glow-breath {
+  0% {
+    filter: drop-shadow(0 0 4px #03fa6e) drop-shadow(0 0 8px #03fa6e);
+    opacity: 0.7;
+  }
+  50% {
+    filter: drop-shadow(0 0 16px #03fa6e) drop-shadow(0 0 32px #03fa6e);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 4px #03fa6e) drop-shadow(0 0 8px #03fa6e);
+    opacity: 0.7;
+  }
+}
+
+  #logo:hover svg path {
+  stroke: #171810;
+}
+
+ #logo:hover {
+    background-color: #03fa6e;
+    color: #171810;
+    box-shadow: 0 0 25px #03fa6e, 0 0 35px #03fa6e, 0 0 45px #03fa6e;
+ }
+
+ #logo svg {
+  margin: 10px;
+  width: 120px;
+  height: 100px;
+}
+
+ #logo {
+  background: #171810;
+  justify-content: center;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  animation: matrixLogoIn 2.2s cubic-bezier(.77,0,.18,1) forwards 2.2s;
+  display: block;
+  z-index: 2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@keyframes matrixLogoIn {
+  0% {
+    opacity: 0;
+    filter: blur(8px) brightness(0.5) drop-shadow(0 0 0 #03fa6e);
+    transform: scale(0.7);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(2px) brightness(1.2) drop-shadow(0 0 30px #03fa6e);
+    transform: scale(1.08);
+  }
+  80% {
+    filter: blur(0.5px) brightness(1.1) drop-shadow(0 0 20px #03fa6e);
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1) drop-shadow(0 0 10px #03fa6e);
+    transform: scale(1);
+  }
+}
   
 /* ...existing code... */
 .button-container {

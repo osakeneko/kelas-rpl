@@ -15,6 +15,16 @@
     gap: 10px; /* space between clock and SVG */
 }
 
+@media screen and (max-width: 600px) {
+    #clock-container {
+        display: flex;
+        flex-direction: row-reverse;
+        top: 5px;
+        right: 5px;
+        padding: 5px 10px;
+    }
+    
+}
 
 #clock {
     font-size: 2rem;
