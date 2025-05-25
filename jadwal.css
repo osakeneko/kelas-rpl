@@ -23,14 +23,14 @@ canvas#matrix {
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     position: relative;
     z-index: 1;
-    max-height: 90vh;
+    max-height: 80%;
 }
 
 .schedule-table { 
     width: 100%;
     border-collapse: collapse;
     background-color: transparent; /* Set table background to transparent */
-    height: 80vh;
+    max-height: 80%;
 }
 
 .schedule-table td {
@@ -59,7 +59,7 @@ canvas#matrix {
     font-size: 14px;  /* Default font size for subjects */
 }
 
-.schedule-table .subjects .items svg{
+.schedule-table svg{
     width: 48px;
     height: 48px;
     margin: 0 8px;
