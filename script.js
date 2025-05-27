@@ -43,6 +43,6 @@ infoSvg.innerHTML = `
   </g>
 `;
 infoSvg.onclick = function() {
-    window.location.href = "https://osakeneko.github.io/kelas-rpl/";
+    window.location.href = "index.html";
 };
 clockContainer.appendChild(infoSvg);

@@ -33,7 +33,7 @@
   
   h1 {
     font-size: 3em;
-    margin-top: 10px;
+    margin-top: auto;
     text-shadow: 0 0 10px #03fa6e, 0 0 20px #03fa6e, 0 0 30px #03fa6e;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -42,7 +42,7 @@
     img {
     width: 300px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 0 20px #03fa6e;
     opacity: 0;
@@ -142,6 +142,10 @@
       width: calc(50% - 10px); /* Adjust button width to fit two columns with gap */
       font-size: 0.9em; /* Adjust font size for mobile */
       padding: 8px 15px; /* Adjust padding for mobile */
+    }
+
+    h1 {
+      margin-top: 60px;
     }
   }
   
