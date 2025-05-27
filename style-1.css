@@ -104,8 +104,6 @@ small {
   -ms-overflow-style: none;
   list-style: none;
   counter-reset: absen;
-  max-width: 900px;    /* Optional: limit max width on large screens */
-  min-width: 220px;
 }
 
 .guru-list {

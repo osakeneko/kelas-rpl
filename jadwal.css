@@ -16,7 +16,7 @@ canvas#matrix {
 }
 
 .schedule-container {
-    margin: 50px auto 25px;  /* Adjusted top margin to push down the container */
+    margin: 35px auto 25px;  /* Adjusted top margin to push down the container */
     padding: 10px;      /* Adjusted padding */
     border: 2px solid #00FF00;
     width: 60%;         /* Reduced width slightly */
@@ -26,11 +26,15 @@ canvas#matrix {
     max-height: 80%;
 }
 
+table {
+    max-height: 80%;  /* Limit height to 80% of viewport */
+}
+
 .schedule-table { 
     width: 100%;
     border-collapse: collapse;
     background-color: transparent; /* Set table background to transparent */
-    max-height: 80%;
+    max-height: 85%;
 }
 
 .schedule-table td {
@@ -51,7 +55,6 @@ canvas#matrix {
 
 .schedule-table .subjects {
     justify-content: center;
-    
     display: flex;
     flex-direction: row;
     color: white;
@@ -59,7 +62,7 @@ canvas#matrix {
     font-size: 14px;  /* Default font size for subjects */
 }
 
-.schedule-table svg{
+ .schedule-container svg {
     width: 48px;
     height: 48px;
     margin: 0 8px;
@@ -90,9 +93,10 @@ canvas#matrix {
     background-color: transparent;  /* Transparent background */
 }
 
-.current-day svg { fill: #00FF00;}
+.current-day svg {fill: #00FF00;}
 
 .current-day {
+    fill: #00FF00;
     background-color: rgba(0, 255, 0, 0.3);
     border: 2px solid red;
 }

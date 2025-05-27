@@ -1,12 +1,8 @@
-// Ganti URL berikut dengan URL Web App Google Apps Script kamu untuk masing-masing folder
-const endpoints = {
-  x:   'https://script.google.com/macros/s/AKfycbwo23uOEGPnoQiG6XGtlqRjVCeFZiZa26-8gaf7Mls-UyNxAI2ebd4ycbRSrsh5FirJ/exec',   // contoh: 'https://script.google.com/macros/s/AKfycbx.../exec'
-  xi:  'https://script.google.com/macros/s/AKfycbx-mwZAutUNWPhQccXPZ8FurRGcWkPZgoDsGRFUk42i3LjiQjoOG3hR_PpG8X6Y4pVS/exec',
-  xii: 'https://script.google.com/macros/s/AKfycbwXo2wDw91-kTy8fHOpxyBZTiTyPGy8_OM15xTSqXsrWC33V6gyCDbyg0rAbIDjGISi/exec'
-};
+// Replace this URL with your actual Replit backend URL
+const BASE_URL = 'https://fatal-some-metadata.96nekotanker.repl.co';
 
-function loadImages(endpoint, containerId) {
-  fetch(endpoint)
+function loadImages(kelas, containerId) {
+  fetch(`${BASE_URL}/images/${kelas}`)
     .then(res => res.json())
     .then(images => {
       const container = document.getElementById(containerId);
@@ -15,23 +11,16 @@ function loadImages(endpoint, containerId) {
         const el = document.createElement('img');
         el.src = img.url;
         el.alt = img.name;
-        el.style.margin = "8px";
-        el.style.maxWidth = "100%";
-        el.style.borderRadius = "10px";
-        el.style.display = "block";
-        el.style.objectFit = "cover";
-        el.style.width = "100%";
-        el.style.maxHeight = "300px";
+        el.className = 'gallery-img';
         container.appendChild(el);
       });
     })
     .catch(err => {
-      const container = document.getElementById(containerId);
-      container.innerHTML = '<p style="color:red;">Gagal memuat gambar.</p>';
+      console.error(`Failed to load images for ${kelas}:`, err);
     });
 }
 
-// Panggil fungsi untuk masing-masing folder
-loadImages(endpoints.x, 'img-X');
-loadImages(endpoints.xi, 'img-XI');
-loadImages(endpoints.xii, 'img-XII');
+// Load images for each class
+loadImages('X', 'img-X');
+loadImages('XI', 'img-XI');
+loadImages('XII', 'img-XII');
